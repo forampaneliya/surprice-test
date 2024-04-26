@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">username:</label>
+    <input type="text" id="username"><br>
+    <label for="">password:</label>
+    <input type="password" id="password"><br>
+    <label for="">date:</label>
+    <input type="date" id="date"><br>
+    <a href="form.html">forget password</a><br>
+
+
+    <label for="">gender:</label>
+    <input type="radio" value="male" name="gender" id="male" checked>
+    <label for="male">male</label>
+    <input type="radio" value="female" name="gender" id="female">
+    <label for="female">female</label><br>
+
+
+    <label for="">Hobbies:</label><br>
+    <input type="checkbox" name="hobbies" id="singing">singing<br>
+    <input type="checkbox" name="hobbies" id="reading">reading<br>
+    <input type="checkbox" name="hobbies" id="Dansing">Dansing<br>
+
+
+
+
+    <p id="error"></p>
+    <p id="error2"></p>
+    <p id="error3"></p>
+    <p id="gen"></p>
+    <p id="hobb"></p>
+
+
+
+
+
+
+
+    <button onclick="submit()">submit</button>
+
+
+
+    <script>
+        function submit() {
+            let username = document.getElementById("username").value
+            let password = document.getElementById("password").value
+            let date = document.getElementById("date").value
+
+
+            console.log(username);
+            console.log(password);
+            console.log(date);
+
+
+
+            if (username == "") {
+                let username = (document.getElementById("error").innerHTML = "please enter your username");
+
+            }
+            else {
+                document.getElementById("error").innerHTML = username;
+
+            }
+            if (password == "") {
+                let password = (document.getElementById("error2").innerHTML = "please enter your password");
+            }
+            else {
+                document.getElementById("error2").innerHTML = password;
+
+            }
+            if (date == "") {
+                let date = (document.getElementById("error3").innerHTML = "please enter your date");
+
+            }
+            else {
+                document.getElementById("error3").innerHTML = date;
+
+            }
+
+
+            // let gender = document.querySelector('input[name="gender"]:checked').value
+            // console.log(gender);
+            // document.getElementById("gen").innerHTML = gender;
+
+
+            
+
+
+
+            //    let rdb1= document.getElementById("male");
+            //    let rdb2= document.getElementById("female");
+            //    if(rdb1.checked==true)
+            //    {
+            //         document.getElementById("male").rdb1.value;
+
+            //    }
+            //    else if(rdb2.checked==true)
+            //    {
+            //     document.getElementById("female").innerHTML=rdb2.value;
+
+            //    }
+            //    else
+            //    {
+            //     document.getElementById("gen").innerHTML="please checked atleast onc"
+            //    }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

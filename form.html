@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">new password</label>
+    <input type="password" id="newpassword">
+    <label for="">conform password</label>
+    <input type="password" id="conformpassword">
+    <p id="done"></p>
+    <button onclick="checkpass()">sign in</button><br><br>
+    <a href="dom.html" style="background-color: rgb(150, 161, 161); color: white; padding: 10px; text-decoration: none;">Back to home page</a>
+
+    <script>
+        function checkpass() {
+            let newpassword=document.getElementById("newpassword").value
+        let conformpassword=document.getElementById("conformpassword").value
+
+        console.log(newpassword);
+        console.log(conformpassword);
+
+        if(newpassword==conformpassword)
+        {
+           document.getElementById("done").innerHTML="correct password";
+        //    document.getElementById("done").style.backgroundImage="url('foram.jpg')";
+
+           document.getElementById("done").style.color="white"
+           document.getElementById("done").style.backgroundColor="green"
+           document.getElementById("done").style.padding="1000px"
+           document.getElementById("done").style.width="2000px"
+// 
+
+
+
+        }
+        else
+        {
+            document.getElementById("done").innerHTML="wrong password please check";
+            document.getElementById("done").style.color="white"
+            document.getElementById("done").style.backgroundColor="red"
+            document.getElementById("done").style.padding="10px"
+            document.getElementById("done").style.width="200px"
+
+
+
+
+
+
+
+        }
+        }
+       
+    </script>
+    
+</body>
+</html>
